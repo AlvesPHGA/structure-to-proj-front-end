@@ -5,19 +5,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
    mode: 'development',
 
-   // watch: true,
-
-   // watchOptions: {
-   //    aggregateTimeout: 200,
-   //    ignored: /node_modules/,
-   // },
-
    entry: {
       index: './src/index.js',
    },
 
    output: {
-      // filename: '[name].bundle.js',
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, './dist'),
       clean: true,
@@ -85,7 +77,6 @@ module.exports = {
                {
                   loader: MiniCssExtractPlugin.loader,
                },
-               // 'style-loader',
                'css-loader',
                'sass-loader',
             ],
