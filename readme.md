@@ -6,9 +6,9 @@ This project used the following technologies:
 
 <ul>
    <li>Pug: to templating html -> more information about pug: <a href = 'https://pugjs.org/api/getting-started.html'>+ info </a></li>
-   <li>Sass: to style -> more informagion about Sass: <a href = 'https://sass-lang.com/'>+ info </a></li>
+   <li>Sass: to style -> more information about Sass: <a href = 'https://sass-lang.com/'>+ info </a></li>
    <li>JavaScript</li>
-   <li>Webpack: more informagion about Webpack: <a href = 'https://webpack.js.org/'>+ info </a></li>
+   <li>Webpack: more information about Webpack: <a href = 'https://webpack.js.org/'>+ info </a></li>
 </ul>
 
 ## Schema project
