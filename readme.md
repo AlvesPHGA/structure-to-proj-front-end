@@ -11,6 +11,14 @@ This project used the following technologies:
    <li>Webpack: more information about Webpack: <a href = 'https://webpack.js.org/'>+ info </a></li>
 </ul>
 
+## How install
+
+<ul>
+   <li>First: clone project</li>
+   <li>Second: <code>npm init</code></li>
+   <li>Third: <code>npm run build</code></li>
+</ul>
+
 ## Schema project
 
 <pre>
