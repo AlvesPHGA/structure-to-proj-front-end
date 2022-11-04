@@ -1,6 +1,7 @@
 // import _ from 'lodash';
-import './style/style.scss';
-import printMe from './script/modules/print.js';
+import printMe from './modules/print.js';
+
+console.log('>> Hello Pug!');
 
 const element = document.querySelector('button');
 
