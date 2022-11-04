@@ -11,12 +11,16 @@ html(lang="pt-br")
          - pipe = ''
       title #{title} #{pipe}
 
+      //- use source styles directly in Pug
+      link(href=require('../style/style.scss') rel='stylesheet')
+
    body( class = page )
       include ./includes/global/header
 
       main
          block content
 
-      script( defer src = '../index.bundle.js' )
-
       include ./includes/global/footer
+
+      //- use source scripts directly in Pug, at last position in body
+      script(src=require('../script/index.js') defer)
