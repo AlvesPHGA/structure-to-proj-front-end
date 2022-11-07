@@ -27,5 +27,13 @@
     "lodash": "^4.17.21"
   },
   "main": "webpack.config.js",
-  "description": ""
+  "description": "It's a small structure webpack to front-end projects.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvesPHGA/structure-to-proj-front-end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlvesPHGA/structure-to-proj-front-end/issues"
+  },
+  "homepage": "https://github.com/AlvesPHGA/structure-to-proj-front-end#readme"
 }

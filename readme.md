@@ -15,8 +15,8 @@ This project used the following technologies:
 
 <ul>
    <li>First: clone project</li>
-   <li>Second: <code>npm init</code></li>
-   <li>Third: <code>npm run build</code></li>
+   <li>Second: <code>npm install</code></li>
+   <li>Third: <code>npm start</code> (watch)</li>
 </ul>
 
 ## Schema project
@@ -27,15 +27,25 @@ This project used the following technologies:
 |- packege.json
 |- webpack.config.js
 |- /dist
-   |- /views
-      |- index.html
-   |- index.css
-   |- index.[hash].js
+   |- /assets
+      |- /css
+         |- style.[hash].css
+      |- /images
+      |- /js
+         |- index.[hash].js
+         |- runtime.[hash].js
+   |- index.html
 |- /src
-   |- /img
    |- /script
       |- /modules (it is a javascript folder where the functions will be)
+      |- another-module.js
+      |- index.js
    |- /style
+      |- /includes
+         |- /global
+            |- _footer.scss
+            |- _header.scss
+         |- /pages
       |- style.scss
    |- /views
       |- /includes
@@ -45,5 +55,4 @@ This project used the following technologies:
          |- /home
       |- /pages
       |- template.pug
-   |- index.js
 </pre>
