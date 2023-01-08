@@ -5,7 +5,7 @@ module.exports = {
    mode: 'development',
 
    entry: {
-      'index': './src/views/pages/index.pug', // => dist/index.html
+      index: './src/views/pages/index.pug', // => dist/index.html
    },
 
    output: {
@@ -37,20 +37,28 @@ module.exports = {
       compress: true,
       // enable HMR live reload
       watchFiles: {
-         paths: ['src/**/*.*'], 
+         paths: ['src/**/*.*'],
          options: {
-           usePolling: true,
+            usePolling: true,
          },
       },
    },
+
+   // resolve: {
+   //    alias: {
+   //       // use alias to avoid relative paths like `./../../images/`
+   //       Images: path.join(__dirname, './src/images/'),
+   //       Fonts: path.join(__dirname, './src/fonts/'),
+   //    },
+   // },
 
    plugins: [
       // render Pug files from Webpack entry into HTML, extract CSS and JS from sources defined in Pug
       new PugPlugin({
          pretty: true, // formatting HTML, should be used in development mode only
          extractCss: {
-         // output filename of CSS files
-         filename: 'assets/css/[name].[contenthash:8].css'
+            // output filename of CSS files
+            filename: 'assets/css/[name].[contenthash:8].css',
          },
       }),
    ],
@@ -78,16 +86,26 @@ module.exports = {
          // css
          {
             test: /\.scss$/i,
-            use: [
-               'css-loader',
-               'sass-loader',
-            ],
+            use: ['css-loader', 'sass-loader'],
          },
 
-         // medias
+         // medias - image
          {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            test: /\.(webp|png|jpg|jpe?g|ico)/,
             type: 'asset/resource',
+            generator: {
+               filename: 'assets/images/[name].[hash:8][ext]',
+            },
+         },
+
+         // fonts
+         {
+            test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+            type: 'asset/resource',
+            generator: {
+               // output filename of fonts
+               filename: 'assets/fonts/[name][ext][query]',
+            },
          },
       ],
    },

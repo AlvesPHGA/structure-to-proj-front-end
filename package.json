@@ -16,7 +16,7 @@
     "@babel/preset-env": "^7.19.4",
     "babel-loader": "^9.0.0",
     "css-loader": "^6.7.1",
-    "pug-plugin": "^4.5.0",
+    "pug-plugin": "^4.8.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
     "webpack": "^5.74.0",
