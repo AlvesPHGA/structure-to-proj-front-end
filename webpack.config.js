@@ -44,14 +44,6 @@ module.exports = {
       },
    },
 
-   // resolve: {
-   //    alias: {
-   //       // use alias to avoid relative paths like `./../../images/`
-   //       Images: path.join(__dirname, './src/images/'),
-   //       Fonts: path.join(__dirname, './src/fonts/'),
-   //    },
-   // },
-
    plugins: [
       // render Pug files from Webpack entry into HTML, extract CSS and JS from sources defined in Pug
       new PugPlugin({
