@@ -58,21 +58,37 @@ module.exports = {
    module: {
       rules: [
          {
-            test: /\.js$/,
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            // test: /\.js$/,
             exclude: /node_modules/,
-            use: {
-               loader: 'babel-loader',
+            // use: {
+            //    loader: 'babel-loader',
 
-               options: {
-                  presets: ['@babel/preset-env'],
-               },
-            },
+            //    options: {
+            //       presets: ['@babel/preset-env'],
+            //    },
+            // },
          },
 
          // pug
          {
             test: /\.pug$/,
-            loader: PugPlugin.loader, // PugPlugin contain the '@webdiscus/pug-loader',
+
+            oneOf: [
+               {
+                  issuer: /\.(js|ts)$/,
+                  loader: PugPlugin.loader, // PugPlugin contain the '@webdiscus/pug-loader',
+
+                  options: {
+                     method: 'compile',
+                  },
+               },
+
+               {
+                  loader: PugPlugin.loader, // PugPlugin contain the '@webdiscus/pug-loader',
+               },
+            ],
          },
 
          // css
@@ -101,4 +117,8 @@ module.exports = {
          },
       ],
    },
+
+   // resolve: {
+   //    extensions: ['.tsx', '.ts', '.js'],
+   // },
 };
