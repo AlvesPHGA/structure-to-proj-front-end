@@ -36,17 +36,31 @@ This project used the following technologies:
          |- runtime.[hash].js
    |- index.html
 |- /src
+   |- /fonts
+   |- /images
    |- /script
       |- /modules (it is a javascript folder where the functions will be)
       |- another-module.js
       |- index.js
    |- /style
+      |- /components
+         |- _index.scss
       |- /includes
          |- /global
             |- _footer.scss
             |- _header.scss
+            |- _index.scss
          |- /pages
+            |- _index.scss
+         |- _index.scss
+      |- /pages
+         |- _base.scss
+         |- _colors.scss
+         |- _index.scss
+         |- _measurements.scss
+         |- _medias.scss
       |- style.scss
+   |- /svg
    |- /views
       |- /includes
          |- /global
@@ -54,5 +68,6 @@ This project used the following technologies:
             |- header.pug
          |- /home
       |- /pages
+         |- index.pug
       |- template.pug
 </pre>
