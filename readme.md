@@ -14,9 +14,10 @@ This project used the following technologies:
 ## How install
 
 <ul>
-   <li>First: clone project</li>
-   <li>Second: <code>npm install</code></li>
-   <li>Third: <code>npm start</code> (watch)</li>
+   <li>1: clone project</li>
+   <li>2: <code>npm install</code></li>
+   <li>3: <code>npm start</code> (watch)</li>
+   <li>4: <code>npm run build</code> (run project)</li>
 </ul>
 
 ## Schema project
